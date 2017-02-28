@@ -1,0 +1,10 @@
+The pre-computed reference distributions for human microarray (Affymetrix HG-U133Plus2)
+were extracted from [1] and for human RNA-Seq from [2]. Threshold distributions were obtained based on the best fitting distribution as described in the RefBool paper[3]. 
+
+Data Access:
+Links coming soon!
+
+References:
+[1] A. Torrente et al., Identification of Cancer Related Genes Using a Comprehensive Map of Human Gene Expression
+[2] C. Klijn et al. (2014) A comprehensive transcriptional portrait of human cancer cell lines. Nat. Biotechnology, 33, 306-312
+[3] S. Jung et al., RefBool: A reference-based algorithm for discretizing gene expression data
