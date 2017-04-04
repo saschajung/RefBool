@@ -13,7 +13,7 @@ Pvals_low = zeros(r,c);
 Pvals_up = zeros(r,c);
 Pvals_inter_low = zeros(r,c);
 Pvals_inter_up = zeros(r,c);
-for i=1:r
+parfor i=1:r
     xq = 0:1e-3:max(max(expression+1e-3));
     if isempty(dists{i}{1})
         Pvals_low(i,:) = NaN;

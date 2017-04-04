@@ -31,7 +31,7 @@ end
 
 
 dists = cell(num_genes,1);
-for g=1:num_genes
+parfor g=1:num_genes
     [dists] = DetermineDistributions(geneExpressionReference(g,:),FittedDists{g},ProbDists{g},bootstrapSamples,precision);
     if ~takeMaxThresholds
        for i=1:numel(dists{1}(:,1))
