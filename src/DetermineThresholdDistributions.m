@@ -1,4 +1,4 @@
-function dists = DetermineThresholdDistributions(geneExpressionReference, bootstrapSamples, precision, sortby, takeMaxThresholds)
+function alldists = DetermineThresholdDistributions(geneExpressionReference, bootstrapSamples, precision, sortby, takeMaxThresholds)
 %DetermineThresholdDistributions
 % INPUT:
 % geneExpressionReference: m by n matrix containing m genes with n samples
@@ -30,7 +30,7 @@ parfor g=1:num_genes
 end
 
 
-dists = cell(num_genes,1);
+alldists = cell(num_genes,1);
 parfor g=1:num_genes
     [dists] = DetermineDistributions(geneExpressionReference(g,:),FittedDists{g},ProbDists{g},bootstrapSamples,precision);
     if ~takeMaxThresholds
@@ -40,7 +40,7 @@ parfor g=1:num_genes
           end
        end
     end
-    dists{g} = dists;
+    alldists{g} = dists;
 end
 
 end
