@@ -43,4 +43,4 @@ The most time consuming part of RefBool is the computation of the threshold dist
 We are currently computing the threshold distributions on a genome-wide scale for human RNA-Seq and microarray (probeset IDs) expression and will provide links for downloading them. In the meantime, if you want to use RefBool for discretizing your data, please refer to the links in the file *DataAccess.txt*.
 
 ## Citation
-Sascha Jung, Andras Hartmann, Antonio del Sol; RefBool: a reference-based algorithm for discretizing gene expression data . Bioinformatics 2017 btx111. doi: 10.1093/bioinformatics/btx111
+Sascha Jung, Andras Hartmann, Antonio del Sol; RefBool: a reference-based algorithm for discretizing gene expression data. Bioinformatics 2017 Jul 1;33(13):1953-1962. DOI: [10.1093/bioinformatics/btx111](https://doi.org/10.1093/bioinformatics/btx111).
