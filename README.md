@@ -23,16 +23,16 @@ RefBool then returns a (m by 1) cell array of lower and upper threshold distribu
 
 ### 2. Calculate p- and q- values for query expression values
 Based on the previously obtained threshold distributions, RefBool derives p- and q-values for a query gene expression (pattern) by calling the function **CalculatePValues.m** with the following inputs:
-1. A cell array of previously obtained threshold distributions.
-2. A matrix of query expression values containing m genes (rows) in n samples (columns). Importantly, the user has to ensure that the query genes are in the same order as the threshold distributions and both have the same length. In particular, query expression values in row *i* and threshold distributions in row *i* have to belong to the same gene.
+- **1**: A cell array of previously obtained threshold distributions.
+- **2**: A matrix of query expression values containing m genes (rows) in n samples (columns). Importantly, the user has to ensure that the query genes are in the same order as the threshold distributions and both have the same length. In particular, query expression values in row *i* and threshold distributions in row *i* have to belong to the same gene.
 
 q-values are calculated at the end of the function based on Benjamini-Hochberg correction. Even though it is possible to call this function with a single query gene expression value, the user should derive the whole query expression matrix and corresponding threshold distributions and invoke the function with them to ensure that multiple testing correction takes effect.
 
 ### 3. Booleanize query expression values
 Finally, booleanized or discretized query expression values are obtained by calling the function **Booleanize_Bypval.m** with parameters:
-1. - 4. The q-value matrices for lower, upper and intermediate thresholds obtained in the last step.
-5. A significance cutoff for lower and upper thresholds (e.g. 0.05)
-6. A significance cutoff for the intermediate region (e.g. 0.1)
+- **1-4**: The q-value matrices for lower, upper and intermediate thresholds obtained in the last step.
+- **5**: A significance cutoff for lower and upper thresholds (e.g. 0.05)
+- **6**: A significance cutoff for the intermediate region (e.g. 0.1)
 
 The output is a single matrix object populated with 0s, 1s and 0.5s corresponding to inactive, active and intermediate states. Note: The discretization for some query expression values might be *NaN*. This happens if the query values are close to the mean of one of the threshold distributions. However, by relaxing the intermediate region cutoff to *1*, all these values will be assignet to the intermediate expression state.
 
