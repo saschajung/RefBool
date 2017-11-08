@@ -2,7 +2,15 @@ The pre-computed reference distributions for human microarray (Affymetrix HG-U13
 were extracted from [1] and for human RNA-Seq from [2]. Threshold distributions were obtained based on the best fitting distribution as described in the RefBool paper[3]. 
 
 Data Access:
-Links coming soon!
+The pre-processed RNA-Seq data from [1] is available at
+https://webdav-r3lab.uni.lu/public/cbg/RefBool_ReferenceDistributions/
+
+for linux/unix systems you can use e.g.:
+$wget -r -nH --cut-dirs=2 --no-parent https://webdav-r3lab.uni.lu/public/cbg/RefBool_ReferenceDistributions/
+
+In this pre-processed dataset counts are in transcript per millon (TPM) form.
+
+More data will be available soon!
 
 References:
 [1] A. Torrente et al., Identification of Cancer Related Genes Using a Comprehensive Map of Human Gene Expression
