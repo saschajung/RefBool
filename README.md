@@ -39,8 +39,12 @@ The output is a single matrix object populated with 0s, 1s and 0.5s correspondin
 ## Runtime
 The most time consuming part of RefBool is the computation of the threshold distributions. For the results described in the paper, the derivation for one gene took around 30 to 45 seconds, depending on the best fitting distribution. Therefore, if one wants to discretize genome-wide gene expression measurements, the use of a computing cluster may be necessary. However, this step needs to be performed only once! The runtime of the other functions is much faster and takes only several seconds to minutes.
 
-## Availability of pre-computed threshold distributions
-We are currently computing the threshold distributions on a genome-wide scale for human RNA-Seq and microarray (probeset IDs) expression and will provide links for downloading them. In the meantime, if you want to use RefBool for discretizing your data, please refer to the links in the file *DataAccess.txt*.
+## Availability of testdata
+- Threshold distributions on a genome-wide scale for human RNA-Seq in TPM is available at:
+https://webdav-r3lab.uni.lu/public/cbg/RefBool_ReferenceDistributions/
+- A wroking test code is provided in the *example* folder
+- See further information in the *DataAccess.txt* file 
+- We are currently computing threshold distributions for microarray (probeset IDs) expression and will soon provide links for downloading them. 
 
 ## Citation
 Sascha Jung, Andras Hartmann, Antonio del Sol; RefBool: a reference-based algorithm for discretizing gene expression data. Bioinformatics 2017 Jul 1;33(13):1953-1962. DOI: [10.1093/bioinformatics/btx111](https://doi.org/10.1093/bioinformatics/btx111).
