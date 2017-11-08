@@ -22,6 +22,9 @@ function alldists = DetermineThresholdDistributions(geneExpressionReference, boo
 FittedDists = cell(num_genes,1);
 ProbDists = cell(num_genes,1);
 
+%allfitdist folder is necessary in the path
+addpath('allfitdist')
+
 %Get distribution type for each reference gene
 parfor g=1:num_genes
    [~,PD] = allfitdist(geneExpressionReference(g,:),sortby);
