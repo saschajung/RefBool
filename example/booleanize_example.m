@@ -5,7 +5,7 @@
 % 
 % $git clone https://github.com/saschajung/RefBool.git
 %
-% 2. Download the background distribution from:
+% 2. Download the TPM background distribution from:
 %
 % https://webdav-r3lab.uni.lu/public/cbg/RefBool_ReferenceDistributions/
 %
