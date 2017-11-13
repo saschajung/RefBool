@@ -25,7 +25,7 @@ else if any(strcmpi(type,{'birnbaumsaunders','Birnbaum-Saunders'}))
                  end                
             else if strcmpi(type,'extreme value')
                      for i=1:numel(bootstrapParams(:,1))
-                        PDs{i} =  makedist(type,'a',bootstrapParams(i,1),'b',bootstrapParams(i,2));
+                        PDs{i} =  makedist(type,'mu',bootstrapParams(i,1),'sigma',bootstrapParams(i,2));
                      end                    
                 else if strcmpi(type,'gamma')
                          for i=1:numel(bootstrapParams(:,1))
